@@ -13,5 +13,5 @@ public interface Map {
 	/**
 	 * @return the number of case
 	 */
-	int getNumberOfCase();
+	int getNumberOfSquares();
 }

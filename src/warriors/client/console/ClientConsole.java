@@ -1,9 +1,5 @@
 package warriors.client.console;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import warriors.contracts.GameState;
@@ -56,6 +52,7 @@ public class ClientConsole {
 
 		GameState gameState = warriors.createGame(playerName, chosenHeroe, choosenMap);
 		String gameId = gameState.getGameId();
+
 		while (gameState.getGameStatus() == GameStatus.IN_PROGRESS) {
 			System.out.println(gameState.getLastLog());
 			System.out.println("\nAppuyer sur une touche pour lancer le dé"); 

@@ -11,11 +11,6 @@ public interface Hero {
 	String getName();
 
 	/**
-	 * @return the image of the hero
-	 */
-	String getImage();
-
-	/**
 	 * @return the life level of the hero
 	 */
 	int getLife();

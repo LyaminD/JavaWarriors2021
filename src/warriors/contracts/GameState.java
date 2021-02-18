@@ -38,5 +38,5 @@ public interface GameState {
 	/**
 	 * @return the current case
 	 */
-	int getCurrentCase(); 
+	int getCurrentSquare();
 }
