@@ -52,6 +52,7 @@ public class ClientConsole {
 
 		GameState gameState = warriors.createGame(playerName, chosenHeroe, chosenMap);
 		String gameId = gameState.getGameId();
+
 		while (gameState.getGameStatus() == GameStatus.IN_PROGRESS) {
 			System.out.println(gameState.getLastLog());
 			System.out.println("\nAppuyer sur une touche pour lancer le D");
