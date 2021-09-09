@@ -14,7 +14,7 @@ public interface GameState {
 	 * @return the game unique ID
 	 */
 	String getGameId();
-	
+
 	/**
 	 * @return the game status 
 	 */

@@ -1,9 +1,5 @@
 package warriors.client.console;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import warriors.contracts.GameState;
@@ -30,7 +26,7 @@ public class ClientConsole {
 			}			
 		}while(!menuChoice.equals(MENU_QUITTER));
 		sc.close();
-		System.out.println("à bientôt");
+		System.out.println("A bientot");
 	}
 
 	private static void startGame(WarriorsAPI warriors, Scanner sc) {
@@ -38,7 +34,7 @@ public class ClientConsole {
 		System.out.println("Entrez votre nom:");
 		String playerName = sc.nextLine();
 		
-		System.out.println("Choisissez votre héro:");
+		System.out.println("Choisissez votre hero:");
 		for(int i = 0; i < warriors.getHeroes().size(); i++) {
 			Hero heroe = warriors.getHeroes().get(i);
 			System.out.println(i+1 + " - " + heroe.getName());
@@ -52,17 +48,17 @@ public class ClientConsole {
 			Map map = warriors.getMaps().get(i);
 			System.out.println(i+1 + " - " + map.getName());
 		}
-		Map choosenMap = warriors.getMaps().get(Integer.parseInt(sc.nextLine()) - 1);
+		Map chosenMap = warriors.getMaps().get(Integer.parseInt(sc.nextLine()) - 1);
 
-		GameState gameState = warriors.createGame(playerName, chosenHeroe, choosenMap);
+		GameState gameState = warriors.createGame(playerName, chosenHeroe, chosenMap);
 		String gameId = gameState.getGameId();
 		while (gameState.getGameStatus() == GameStatus.IN_PROGRESS) {
 			System.out.println(gameState.getLastLog());
-			System.out.println("\nAppuyer sur une touche pour lancer le dé"); 
-			if(sc.hasNext()) {
+			System.out.println("\nAppuyer sur une touche pour lancer le D");
+
 				sc.nextLine();
 				gameState = warriors.nextTurn(gameId);
-			}									
+
 		}
 		
 		System.out.println(gameState.getLastLog());
