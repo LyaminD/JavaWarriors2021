@@ -1,6 +1,6 @@
 package warriors.contracts;
 
-import warriors.engine.Case;
+
 
 import java.util.List;
 
@@ -17,8 +17,5 @@ public interface Map {
 	/**
 	 * @return the number of case
 	 */
-	int getNumberOfCase();
-
-	List<Case> getPlateau();
-	Case getCasePlateau(int index);
+	int getNumberOfSquares();
 }
