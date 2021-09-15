@@ -12,8 +12,6 @@ public class GameState implements warriors.contracts.GameState{
     private String lastLog;
     private int currentSquare;
 
-
-
     public GameState(String playerName, Hero hero, Map map){
         this.playerName = playerName;
         this.gameStatus = gameStatus.IN_PROGRESS;

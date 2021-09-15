@@ -1,6 +1,5 @@
 package warriors.engine;
 
-
 public class Square {
     private Event event;
 

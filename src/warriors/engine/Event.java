@@ -7,8 +7,8 @@ public class Event {
     protected String type;
 
     public Event(){
-        this.name = "";
-        this.type = "";
+        this.name = "vide";
+        this.type = "vide";
     }
 
     public Event(String name, int lifeLevel, int attackLevel, String type){
@@ -30,7 +30,7 @@ public class Event {
         return lifeLevel;
     }
 
-    public String type(){
+    public String getType(){
         return type;
     }
 

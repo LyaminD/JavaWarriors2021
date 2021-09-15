@@ -7,6 +7,6 @@ public class Enemy extends Event{
     }
 
     public String  toString(){
-        return "Vous rencontrez un" + name + ", il a" + attackLevel + "attaques et" + lifeLevel + "points de vie.";
+        return "Vous rencontrez un " + name + ", il a " + attackLevel + " attaques et" + lifeLevel + " points de vie.";
     }
 }

@@ -9,7 +9,6 @@ public class Warrior extends LocalHero {
         super(heroName, lifeLevel, attackLevel);
     }
 
-
     @Override
     public int getMaxLife() {
         return MAXLIFE;
@@ -19,6 +18,4 @@ public class Warrior extends LocalHero {
     public int getMaxAttack() {
         return MAXATTACK;
     }
-
-
 }
